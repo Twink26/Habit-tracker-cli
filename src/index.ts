@@ -35,11 +35,11 @@ function addHabit(name: string) {
 function listHabits() {
   const habits = loadHabits();
   if (habits.length === 0) {
-    console.log("📭 No habits found. Add one with: npm start add \"Habit Name\"");
+    console.log(" No habits found. Add one with: npm start add \"Habit Name\"");
     return;
   }
 
-  console.log("\n📋 Your Habits:");
+  console.log("\n Your Habits:");
   habits.forEach((habit, index) => {
     const status = habit.status === HabitStatus.Done ? "✅" : "⏳";
     console.log(`${index + 1}. ${habit.name} [${status}]`);
